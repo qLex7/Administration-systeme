@@ -15,7 +15,7 @@ def mail(mes):
 
 	#----------Les parametres du message------------ 
 
-	password = "4Fc275113"
+	password = "mdp"
 	msg['From'] = "guillaume.debord@alumni.univ-avignon.fr"
 	msg['To'] = "guillaume.debord@alumni.univ-avignon.fr"
 	msg['Subject'] = "Alerte"
