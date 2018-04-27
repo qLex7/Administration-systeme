@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*-coding: Latin-1 -*-
-import os,sys
+import os
+import sys
 import pygal
 import sqlite3
 from datetime import datetime, timedelta
