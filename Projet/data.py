@@ -53,7 +53,7 @@ def data():
 
 
 
-	moduleCrise.crise(bdd[0],bdd[1],bdd[2])
+	moduleCrise.crise(99,99,99)
 
 	conn.commit()
 	conn.close()
@@ -76,7 +76,7 @@ def dataPars():
 	#Cela permet de supprimer l'ancienne alerte qui est stocke
 	cursor.execute("DELETE FROM Alerte")
 
-	cursor.execute("INSERT INTO Alerte VALUES(?,?)",ma_liste)
+	#cursor.execute("INSERT INTO Alerte VALUES(?,?)",ma_liste)
 
 	#Affiche la Base de donnee (data)
 	for row in cursor.execute("SELECT * FROM Alerte"):

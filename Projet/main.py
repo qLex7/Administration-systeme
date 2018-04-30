@@ -2,10 +2,11 @@
 # -*- coding : utf-8- -*-
 
 import os
+import sys
 import time
 import sonde2
 import sonde3
-#import interface
+import interface
 import data
 
 from time import gmtime, strftime
@@ -17,7 +18,7 @@ while 1:
 	sonde3.sonde3()
 	data.data()
 	data.dataPars()
-	#interface.interface()
+	interface.graph()
 
 
 

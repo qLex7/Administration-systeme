@@ -8,4 +8,4 @@ from urllib2 import urlopen
 def parseur():
 	page = urlopen("https://www.cert.ssi.gouv.fr/alerte/feed").read()
 	soup = BeautifulSoup.BeautifulSoup(page)
-	
+	print soup.item.title.text

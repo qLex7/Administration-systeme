@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*-coding: Latin-1 -*-
+import os, sys
 import subprocess as sp
 import time
 
@@ -15,10 +16,9 @@ def sonde3():
         #--------------------------------CPU utilise--------------------------------------------
         cmd= "top -b -n1 | grep 'Cpu' | cut -d' ' -f11 | sed 's/,/./g'"
         p = sp.Popen(cmd,stdout=sp.PIPE,stderr=None,shell=True)
-        CpuDispo=float(p.stdout.readline())
-        CpuUse=100-float(CpuDispo)
-        data.append("%.2f" % CpuUse)
-
+        cpuDispo = float(p.stdout.readline())
+        cpuUtil = 100 - float(cpuDispo)
+        data.append("%.2f" % cpuUtil)
 
         #-------------------------------MemTotal------------------------------------ 
         cmd="grep MemTotal /proc/meminfo | cut -d: -f2 | sed 's/kB//'g"	
